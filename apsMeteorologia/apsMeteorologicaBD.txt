@@ -1,0 +1,13 @@
+
+CREATE DATABASE apsMeteorologia; 
+USE apsMeteorologia;
+CREATE TABLE clima(
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    temperatura VARCHAR(50),
+    umidade VARCHAR(50),
+    precipitacao VARCHAR(50),
+    data_registro VARCHAR(50)
+);
+
+insert into clima VALUES(0,'45ºC','45%','3%',now())
+insert into clima VALUES(0,'23ºC','55%','6%',"20-11-2021 21:19:59")
