@@ -182,14 +182,21 @@ public class frmPrincipal extends javax.swing.JDialog
             @Override
             public void run()
             {
+                try
+                {
+                    List<String> dadosClima = new ArrayList<>();
+                    dadosClima.add("0");
+                    dadosClima.add(Protocolo.temperatura + "ºC");
+                    dadosClima.add(Protocolo.umidade + "%");
+                    dadosClima.add(Protocolo.precipitacao + "%");
 
-                List<String> dadosClima = new ArrayList<>();
-                dadosClima.add("0");
-                dadosClima.add(Protocolo.temperatura + "ºC");
-                dadosClima.add(Protocolo.umidade + "%");
-                dadosClima.add(Protocolo.precipitacao + "%");
+                    controle.CadastrarClima(dadosClima);
+                }
+                catch (Exception e)
+                {
+                    lblConsole.setText("Erro de conexão com o BD");
+                }
 
-                controle.CadastrarClima(dadosClima);
             }
         };
         Cadastrar.schedule(Loop, 0, 10000);/*Executa a cada 10 segundos*/

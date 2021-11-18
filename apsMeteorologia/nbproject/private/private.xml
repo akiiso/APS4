@@ -7,8 +7,11 @@
             <file>file:/F:/Documentos/NetBeansProjects/APS/apsMeteorologia/src/Apresentacao/frmHistorico.java</file>
             <file>file:/F:/Documentos/NetBeansProjects/APS/apsMeteorologia/src/Main/main.java</file>
             <file>file:/F:/Documentos/NetBeansProjects/APS/apsMeteorologia/src/Apresentacao/frmPrincipal.java</file>
+            <file>file:/F:/Documentos/NetBeansProjects/APS/apsMeteorologia/src/DAL/HibernateUtil.java</file>
             <file>file:/F:/Documentos/NetBeansProjects/APS/apsMeteorologia/src/Modelo/Controle.java</file>
             <file>file:/F:/Documentos/NetBeansProjects/APS/apsMeteorologia/src/Modelo/Validacao.java</file>
+            <file>file:/F:/Documentos/NetBeansProjects/APS/apsMeteorologia/src/Modelo/Serial.java</file>
+            <file>file:/F:/Documentos/NetBeansProjects/APS/apsMeteorologia/src/DAL/DAO.java</file>
         </group>
     </open-files>
 </project-private>
