@@ -16,55 +16,9 @@ public class Validacao
         {
             this.Mensagem = "Dispositivo desconectado";
         }
-
-    }
-
-    public void validarDados(List<String> dadosCarro)
-    {
-        this.Mensagem = "";
-        this.validarID(dadosCarro.get(0));
-        this.validarTemperatura(dadosCarro.get(1));
-        this.validarUmidade(dadosCarro.get(2));
-        this.validarPrecipitacao(dadosCarro.get(3));
-        this.validarDadosDispositivo(dadosCarro);
-
-    }
-
-    public void validarTemperatura(String temperatura)
-    {
-        try
+        else
         {
-            Integer.parseInt(temperatura);
-        }
-        catch (Exception e)
-        {
-            this.Mensagem += "Temperatura inválida <br>";
-        }
-
-    }
-
-    public void validarUmidade(String umidade)
-    {
-        try
-        {
-            Integer.parseInt(umidade);
-        }
-        catch (Exception e)
-        {
-            this.Mensagem += "Umidade inválida <br>";
-        }
-
-    }
-
-    public void validarPrecipitacao(String precipitacao)
-    {
-        try
-        {
-            Integer.parseInt(precipitacao);
-        }
-        catch (Exception e)
-        {
-            this.Mensagem += "Precipitação inválida <br>";
+            this.Mensagem = "";
         }
 
     }
@@ -92,7 +46,6 @@ public class Validacao
         }
         catch (Exception e)
         {
-            this.Mensagem += "Data hora inválida";
             return null;
         }
 

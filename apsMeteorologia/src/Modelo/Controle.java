@@ -14,7 +14,7 @@ public class Controle
         this.mensagem = "";
         
         Validacao validacao = new Validacao();
-        validacao.validarDados(dadosClima);
+        validacao.validarDadosDispositivo(dadosClima);
         
         if (validacao.getMensagem().equals(""))
         {
@@ -36,48 +36,24 @@ public class Controle
 
     }
 
-//    public void EditarClima(List<String> dadosClima)
+//    public void ExcluirClima(String numeroId)
 //    {
 //        this.mensagem = "";
 //        Validacao validacao = new Validacao();
-//        validacao.validarDadosDispositivo(dadosClima);
-//        validacao.validarDados(dadosClima);
+//        validacao.validarID(numeroId);
+//        Clima clima = new Clima();
 //        if (validacao.getMensagem().equals(""))
 //        {
-//            Clima clima = new Clima();
-//            clima.setId(validacao.getId());
-//            clima.setTemperatura(dadosClima.get(1));
-//            clima.setUmidade(dadosClima.get(2));
-//            clima.setPrecipitacao(dadosClima.get(3));
-//            clima.setDataRegistro("0");
 //            DAO climaDAO = new DAO();
-//            climaDAO.Editar(clima);
+//            clima.setId(validacao.getId());
+//            climaDAO.Excluir(clima);
 //            this.mensagem = climaDAO.getMensagem();
 //        }
 //        else
 //        {
 //            this.mensagem = validacao.getMensagem();
 //        }
-//
 //    }
-    public void ExcluirClima(String numeroId)
-    {
-        this.mensagem = "";
-        Validacao validacao = new Validacao();
-        validacao.validarID(numeroId);
-        Clima clima = new Clima();
-        if (validacao.getMensagem().equals(""))
-        {
-            DAO climaDAO = new DAO();
-            clima.setId(validacao.getId());
-            climaDAO.Excluir(clima);
-            this.mensagem = climaDAO.getMensagem();
-        }
-        else
-        {
-            this.mensagem = validacao.getMensagem();
-        }
-    }
 
     public List<Clima> PesquisarClimaHistorico()
     {
