@@ -35,7 +35,7 @@ public class DAO
         List<Clima> listaClimas = new ArrayList<>();
         try
         {
-            Query q = session.createQuery("from Clima c");
+            Query q = session.createQuery("FROM Clima c ORDER BY c.id DESC");
             listaClimas = (List<Clima>) q.list();
         }
         catch (Exception e)

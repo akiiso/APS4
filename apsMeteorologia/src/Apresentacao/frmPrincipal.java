@@ -199,7 +199,7 @@ public class frmPrincipal extends javax.swing.JDialog
 
             }
         };
-        Cadastrar.schedule(Loop, 0, 10000);/*Executa a cada 10 segundos*/
+        Cadastrar.schedule(Loop, 0, 60000);/*Executa a cada 60 segundos*/
 
 
     }//GEN-LAST:event_formWindowOpened
