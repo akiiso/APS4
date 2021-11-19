@@ -48,7 +48,7 @@ public class bgrHistorico
         }
         if (listaClimas.size() >= 1)
         {
-            return null;
+            return "/paginas/paginaHistorico.xhtml";
         }
         return null;
     }

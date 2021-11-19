@@ -9,7 +9,7 @@
     <center>
         <h:form>
             <h1> APS Meteorologia</h1>
-            <h:commandButton id="btnHistorico" value="Historico" action="/paginas/paginaHistorico.xhtml"></h:commandButton>
+            <h:commandButton id="btnHistorico" value="Historico" action="#{bgrHistorico.pesquisarHistorico()}"></h:commandButton>
             <h:outputText id="otpMensagem" value="#{bgrHistorico.mensagem}"></h:outputText>
         </h:form>
     </center>
