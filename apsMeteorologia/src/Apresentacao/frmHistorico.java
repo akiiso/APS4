@@ -1,7 +1,11 @@
 package Apresentacao;
 
 import Modelo.Clima;
+import Modelo.Controle;
 import Modelo.Estaticos;
+import Modelo.Protocolo;
+import java.util.Timer;
+import java.util.TimerTask;
 import javax.swing.table.DefaultTableModel;
 
 public class frmHistorico extends javax.swing.JDialog
@@ -27,21 +31,21 @@ public class frmHistorico extends javax.swing.JDialog
     private void initComponents()
     {
 
-        btnSelecionar = new javax.swing.JButton();
+        btnAtualizar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblHistorico = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Historico");
 
-        btnSelecionar.setBackground(new java.awt.Color(77, 80, 82));
-        btnSelecionar.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        btnSelecionar.setText("Selecionar");
-        btnSelecionar.addActionListener(new java.awt.event.ActionListener()
+        btnAtualizar.setBackground(new java.awt.Color(77, 80, 82));
+        btnAtualizar.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        btnAtualizar.setText("Atualizar");
+        btnAtualizar.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                btnSelecionarActionPerformed(evt);
+                btnAtualizarActionPerformed(evt);
             }
         });
 
@@ -92,7 +96,7 @@ public class frmHistorico extends javax.swing.JDialog
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 718, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(290, 290, 290)
-                .addComponent(btnSelecionar, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -100,7 +104,7 @@ public class frmHistorico extends javax.swing.JDialog
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnSelecionar)
+                .addComponent(btnAtualizar)
                 .addGap(20, 20, 20))
         );
 
@@ -118,13 +122,15 @@ public class frmHistorico extends javax.swing.JDialog
         Estaticos.clima.setDataRegistro((String) tblHistorico.getValueAt(linha, 4));
     }//GEN-LAST:event_tblHistoricoMouseClicked
 
-    private void btnSelecionarActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnSelecionarActionPerformed
-    {//GEN-HEADEREND:event_btnSelecionarActionPerformed
-        this.dispose();
-    }//GEN-LAST:event_btnSelecionarActionPerformed
+    private void btnAtualizarActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnAtualizarActionPerformed
+    {//GEN-HEADEREND:event_btnAtualizarActionPerformed
+
+
+    }//GEN-LAST:event_btnAtualizarActionPerformed
 
     private void preencherTabela()
     {
+
         DefaultTableModel modelo = (DefaultTableModel) tblHistorico.getModel();
         modelo.setNumRows(0);
         for (Clima c : Estaticos.listaClima)
@@ -200,7 +206,7 @@ public class frmHistorico extends javax.swing.JDialog
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSelecionar;
+    private javax.swing.JButton btnAtualizar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblHistorico;
     // End of variables declaration//GEN-END:variables
