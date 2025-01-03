@@ -1,0 +1,2 @@
+# APS - Atividade Prática Supervisionada - 4º Semestre
+O objetivo desta atividade foi utilizar Arduino e Java para desenvolver um dispositivo capaz de capturar informações meteorológicas do ambiente e exibir esses dados em uma página web. O projeto tem como tema Meio Ambiente, visando promover a conscientização sobre questões ambientais e a importância do monitoramento climático para ações sustentáveis.
